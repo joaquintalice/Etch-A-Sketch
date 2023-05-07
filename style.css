@@ -1,3 +1,33 @@
 body {
-    background-color: rgb(69, 69, 69);
+    background-color: gray;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+#canvas {
+    display: grid;
+    width: 70em;
+    height: 40em;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 0px;
+    border: 1px solid black;
+}
+
+.square {
+    background-color: rgb(148, 126, 126);
+    border: 0.001px solid black;
+}
+
+.square:hover {
+    background-color: rgb(24, 9, 9);
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
 }
