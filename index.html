@@ -17,6 +17,7 @@
     <div class="main-container">
 
         <form id="toolbar">
+
             <fieldset id="paint-options">
                 <legend>Paint Options</legend>
                 <label for="paint-color" title="Select Color">
@@ -35,6 +36,8 @@
                     Erase Colors
                 </label>
             </fieldset>
+
+
             <fieldset id="canvas-options">
                 <legend>Canvas Options</legend>
                 <label for="grid-color" title="Select Color">
@@ -48,15 +51,13 @@
                 </label>
                 <button id="clear" title="Clear Canvas" type="button">Clear</button>
                 <label for="canvas-size" title="Change Canvas Size">
-                    <input type="range" id="canvas-size" name="paint-type" value="16" min="8" max="96" step="8">
+                    <input type="range" id="canvas-size" name="paint-type" value="16" min="16" max="100" step="1">
                 </label>
                 <div id="range">8 × 8</div>
             </fieldset>
         </form>
 
-        <div class="game-container">
-
-        </div>
+        <div id="canvas"></div>
     </div>
 
 
