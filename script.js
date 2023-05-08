@@ -6,7 +6,7 @@ const paint_custom = document.getElementById("paint-custom");
 const paint_random = document.getElementById("paint-random");
 //input radio
 const paint_erase = document.getElementById("paint-erase");
-//*****
+/* ********************** */
 
 //input color
 const grid_color = document.getElementById("grid-color");
@@ -22,9 +22,13 @@ const canvas_size = document.getElementById("canvas-size");
 const range = document.getElementById("range");
 //div game container
 const canvas = document.getElementById("canvas");
+/* ********************** */
 
+//node list of the elements created
 let squares;
+/* ********************** */
 
+//creation of the grid elements
 function createGrid(num) {
     canvas.innerHTML = "";
     canvas.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
@@ -39,9 +43,9 @@ function createGrid(num) {
     }
     squares = document.querySelectorAll(".square");
 };
+/* ********************** */
 
-
-
+/*Grid Color and Canvas Color*/
 function updateGridStyle() {
     if (grid_show.checked) {
         squares.forEach(square => {
@@ -64,18 +68,31 @@ function canvaColor() {
 }
 
 canvas_color.addEventListener("change", canvaColor);
+/* **************** */
 
 
+/* create the grid based in the input range value */
 canvas_size.addEventListener("input", function () {
     createGrid(this.value);
     canvaColor();
-    console.log(squares);
-    range.textContent = `${canvas_size.value}x${canvas_size.value}`;
+    range.textContent = `${canvas_size.value} x ${canvas_size.value}`;
+    updateGridStyle();
+});
+/* ************************* */
+
+
+/* when page is loaded, create a grid */
+
+window.addEventListener("load", function () {
+    createGrid(canvas_size.value);
+    canvaColor();
+    range.textContent = `${canvas_size.value} x ${canvas_size.value}`;
+    updateGridStyle();
 });
 
+/* ********************** */
 
-
-
+/*function to know wether the input range to paint with the custom color is checked*/
 paint_custom.addEventListener("change", function () {
     if (this.checked) {
 
@@ -93,11 +110,11 @@ paint_custom.addEventListener("change", function () {
         });
     } else {
         return;
-    }
+    };
+});
+/* ********************** */
 
-})
-
-
+/*function to know wether the input range to paint with the background color (erase) is checked*/
 paint_erase.addEventListener("change", function () {
     if (this.checked) {
 
@@ -115,9 +132,11 @@ paint_erase.addEventListener("change", function () {
         });
     } else {
         return;
-    }
+    };
 });
+/* ********************** */
 
+/*function to know wether the input range to paint with random color is checked*/
 paint_random.addEventListener("change", function () {
     if (this.checked) {
 
@@ -142,14 +161,17 @@ paint_random.addEventListener("change", function () {
         });
     } else {
         return;
-    }
-})
+    };
+});
+/* ********************** */
 
-
+/*clear button*/
 clearbtn.addEventListener("click", function () {
     createGrid(canvas_size.value);
     canvaColor();
+    updateGridStyle();
 })
+/* ********************** */
 
 
 
