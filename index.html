@@ -12,6 +12,7 @@
 <body>
     <div class="header">
         <h1 class="title">Etch-a-sketch</h1>
+        <h1 class="credits">Joaquin Talice</h1>
     </div>
 
     <div class="main-container">
@@ -24,22 +25,21 @@
                     <input type="color" id="paint-color" value="#000000">
                 </label>
                 <label for="paint-custom" title="Custom Paint Color">
-                    <input type="radio" id="paint-custom" name="paint-type" value="custom" checked="">
-                    Custom Color
+                    <input type="radio" id="paint-custom" name="paint-type" value="custom">
+                    <span>Custom color</span>
                 </label>
                 <label for="paint-random" title="Random Paint Color">
                     <input type="radio" id="paint-random" name="paint-type" value="random">
-                    Random Colors
+                    <span id="span-rgb">Random colors</span>
                 </label>
                 <label for="paint-erase" title="Erase Paint Color">
                     <input type="radio" id="paint-erase" name="paint-type" value="erase">
-                    Erase Colors
+                    <span>Erase colors</span>
                 </label>
             </fieldset>
 
-
             <fieldset id="canvas-options">
-                <legend>Canvas Options</legend>
+                <legend>Grid Options</legend>
                 <label for="grid-color" title="Select Color">
                     <input type="color" id="grid-color" value="#000000">
                     Grid Color
@@ -51,13 +51,14 @@
                 </label>
                 <button id="clear" title="Clear Canvas" type="button">Clear</button>
                 <label for="canvas-size" title="Change Canvas Size">
-                    <input type="range" id="canvas-size" name="paint-type" value="16" min="16" max="100" step="1">
+                    <input type="range" id="canvas-size" name="paint-type" value="8" min="1" max="100" step="1">
                 </label>
-                <div id="range">8 × 8</div>
+                <div id="range">1 x 1</div>
             </fieldset>
         </form>
 
         <div id="canvas"></div>
+
     </div>
 
 
