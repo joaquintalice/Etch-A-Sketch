@@ -1,13 +1,27 @@
 body {
-    background-color: rgb(108, 108, 108);
+    background-color: rgb(186, 174, 176);
     font-family: 'VT323', monospace;
+    margin: 0;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
+    background-color: rgb(184, 161, 161);
     border-bottom: 1px solid black;
     margin-bottom: 2rem;
+    padding: 0rem 3rem;
+}
+
+.credits {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.credits img {
+    width: 2.5rem;
+
 }
 
 #canvas {
@@ -17,7 +31,7 @@ body {
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
     gap: 0px;
-    border: 1px solid black;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .square {
@@ -42,10 +56,10 @@ body {
     display: flex;
     font-size: 25px;
     border: 1px solid black;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(184, 161, 161);
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     gap: 30px;
     width: 13rem;
@@ -60,16 +74,22 @@ body {
     font-size: 26px
 }
 
+#canvas-size {
+    align-self: center;
+    width: 13rem;
+}
+
+#range {
+    align-self: center;
+}
+
 /*input color style start*/
 #paint-color {
     width: 13rem;
     height: 4rem;
 }
 
-#grid-color {
-    width: 4rem;
-}
-
+#grid-color,
 #canvas-color {
     width: 4rem;
 }
