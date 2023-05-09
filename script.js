@@ -108,6 +108,18 @@ paint_custom.addEventListener("change", function () {
         canvas.addEventListener("mouseup", function () {
             canvas.removeEventListener("mousemove", paint);
         });
+
+        // mobile
+
+        canvas.addEventListener("touchstart", function (event) {
+            event.preventDefault(); // Prevent scrolling
+            canvas.addEventListener("touchmove", paint);
+        });
+
+        canvas.addEventListener("touchend", function () {
+            canvas.removeEventListener("touchmove", paint);
+        });
+
     } else {
         return;
     };
@@ -129,6 +141,17 @@ paint_erase.addEventListener("change", function () {
 
         canvas.addEventListener("mouseup", function () {
             canvas.removeEventListener("mousemove", erase);
+        });
+
+        // mobile
+
+        canvas.addEventListener("touchstart", function (event) {
+            event.preventDefault(); // Prevent scrolling
+            canvas.addEventListener("touchmove", erase);
+        });
+
+        canvas.addEventListener("touchend", function () {
+            canvas.removeEventListener("touchmove", erase);
         });
     } else {
         return;
@@ -158,6 +181,17 @@ paint_random.addEventListener("change", function () {
 
         canvas.addEventListener("mouseup", function () {
             canvas.removeEventListener("mousemove", randomColor);
+        });
+
+        // mobile
+
+        canvas.addEventListener("touchstart", function (event) {
+            event.preventDefault(); // Prevent scrolling
+            canvas.addEventListener("touchmove", randomColor);
+        });
+
+        canvas.addEventListener("touchend", function () {
+            canvas.removeEventListener("touchmove", randomColor);
         });
     } else {
         return;
