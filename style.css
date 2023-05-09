@@ -1,6 +1,6 @@
 body {
     background-color: rgb(186, 174, 176);
-    font-family: 'VT323', monospace;
+    font-family: 'Kanit', sans-serif;
     margin: 0;
 }
 
@@ -17,21 +17,23 @@ body {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    align-items: center;
 }
 
 .credits img {
+    display: flex;
     width: 2.5rem;
 
 }
 
 #canvas {
     display: grid;
-    width: 50em;
-    height: 50em;
+    width: 40em;
+    height: 40em;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
     gap: 0px;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 8px 8px 19px rgba(0, 0, 0, 0.3);
 }
 
 .square {
@@ -54,7 +56,7 @@ body {
 #paint-options,
 #canvas-options {
     display: flex;
-    font-size: 25px;
+    font-size: 19px;
     border: 1px solid black;
     background-color: rgb(184, 161, 161);
     flex-direction: column;
@@ -69,9 +71,15 @@ body {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+#paint-options label,
+#canvas-options label {
+    display: flex;
+    gap: 10px;
+}
+
 #paint-options legend,
 #canvas-options legend {
-    font-size: 26px
+    font-size: 26px;
 }
 
 #canvas-size {
@@ -199,11 +207,11 @@ input[type="radio"] {
     }
 }
 
+/*animation rbg*/
+
+
 
 /*checkbox style*/
-
-/* checkbox-rect */
-
 #grid-show+label:before {
     content: "";
     width: 1em;
@@ -216,14 +224,326 @@ input[type="radio"] {
     background: #f3f3f3;
 }
 
-#grid-show:checked {
-    border-radius: 0.2em;
-    border: 2px solid #ff0000;
-    background: #50565a;
-    box-shadow: 0 0 0 1px #000;
-}
-
 #grid-show+label:hover:before {
     background: #50565a;
     box-shadow: inset 0px 0px 0px 2px #f7f2f2;
+}
+
+/*checkbox style*/
+
+
+/*media queries*/
+
+@media screen and (max-width: 1600px) {
+
+    .header {
+        padding: 0rem 2rem;
+        font-size: 0.6rem;
+    }
+
+    .credits {
+        gap: 1rem;
+    }
+
+    .credits img {
+        display: flex;
+        width: 1.6rem;
+
+    }
+
+    #canvas {
+        width: 43em;
+        height: 43em;
+    }
+
+    .main-container {
+        gap: 3rem;
+    }
+
+
+    #paint-options,
+    #canvas-options {
+        font-size: 14px;
+        gap: 25px;
+        width: 9rem;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    #paint-options label,
+    #canvas-options label {
+        gap: 10px;
+    }
+
+    #paint-options legend,
+    #canvas-options legend {
+        font-size: 17px;
+    }
+
+    #canvas-size {
+        width: 9rem;
+    }
+
+    /*input color style start*/
+    #paint-color {
+        width: 9rem;
+    }
+
+    #grid-color,
+    #canvas-color {
+        width: 2rem;
+    }
+
+    /*input color style end*/
+
+    /* clear button start */
+    #clear {
+        width: 9rem;
+    }
+
+    #clear {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .header {
+        padding: 0rem 2rem;
+        font-size: 0.6rem;
+    }
+
+    .credits {
+        gap: 1rem;
+    }
+
+    .credits img {
+        display: flex;
+        width: 2rem;
+
+    }
+
+    #canvas {
+        width: 35em;
+        height: 35em;
+    }
+
+    .main-container {
+        gap: 2rem;
+    }
+
+
+    #paint-options,
+    #canvas-options {
+        font-size: 14px;
+        gap: 20px;
+        width: 9rem;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    #paint-options label,
+    #canvas-options label {
+        gap: 10px;
+    }
+
+    #paint-options legend,
+    #canvas-options legend {
+        font-size: 17px;
+    }
+
+    #canvas-size {
+        width: 9rem;
+    }
+
+    /*input color style start*/
+    #paint-color {
+        width: 9rem;
+    }
+
+    #grid-color,
+    #canvas-color {
+        width: 2rem;
+    }
+
+    /*input color style end*/
+
+    /* clear button start */
+    #clear {
+        width: 9rem;
+    }
+
+    #clear {
+        font-size: 14px;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .header {
+        padding: 0rem 2rem;
+        font-size: 0.7rem;
+    }
+
+    .credits {
+        gap: 1rem;
+    }
+
+    .credits img {
+        display: flex;
+        width: 2rem;
+
+    }
+
+    #canvas {
+        width: 27em;
+        height: 27em;
+    }
+
+    .main-container {
+        gap: 1rem;
+    }
+
+
+    #paint-options,
+    #canvas-options {
+        font-size: 11px;
+        gap: 10px;
+        width: 7rem;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    #paint-options label,
+    #canvas-options label {
+        gap: 8px;
+    }
+
+    #paint-options legend,
+    #canvas-options legend {
+        font-size: 13px;
+    }
+
+    #canvas-size {
+        width: 7rem;
+    }
+
+    /*input color style start*/
+    #paint-color {
+        width: 7rem;
+        height: 3rem;
+    }
+
+    #grid-color,
+    #canvas-color {
+        width: 1.5rem;
+    }
+
+    /*input color style end*/
+
+    /* clear button start */
+    #clear {
+        width: 7rem;
+    }
+
+    #clear {
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        font-size: 0.4rem;
+    }
+
+    #canvas {
+        width: 23em;
+        height: 23em;
+        margin-right: 1rem;
+    }
+
+    .credits img {
+        display: flex;
+        width: 1rem;
+    }
+
+    #paint-options,
+    #canvas-options {
+        font-size: 8px;
+        gap: 5px;
+        width: 6rem;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0.3rem;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    #canvas {
+        width: 20em;
+        height: 20em;
+        margin-right: 1rem;
+    }
+
+    .main-container {
+        gap: 0.7rem;
+    }
+
+
+    #paint-options,
+    #canvas-options {
+        font-size: 8px;
+        gap: 5px;
+        width: 6rem;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0.3rem;
+    }
+
+    #paint-options label,
+    #canvas-options label {
+        gap: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #paint-options legend,
+    #canvas-options legend {
+        font-size: 10px;
+    }
+
+    #canvas-size {
+        width: 6rem;
+    }
+
+    /*input color style start*/
+    #paint-color {
+        width: 6rem;
+        height: 2rem;
+
+    }
+
+    #grid-color,
+    #canvas-color {
+        width: 1.3rem;
+    }
+
+    /*input color style end*/
+
+    /* clear button start */
+    #clear {
+        width: 6rem;
+    }
+
+    #clear {
+        font-size: 10px;
+    }
 }
