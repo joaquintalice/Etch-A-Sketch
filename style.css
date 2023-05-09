@@ -404,7 +404,9 @@ input[type="radio"] {
     }
 
     .main-container {
-        gap: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
     }
 
 
