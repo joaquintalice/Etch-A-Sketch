@@ -109,6 +109,10 @@ paint_custom.addEventListener("change", function () {
             canvas.removeEventListener("mousemove", paint);
         });
 
+        canvas.addEventListener("mouseleave", function () {
+            canvas.removeEventListener("mousemove", paint);
+        })
+
         // mobile
 
         canvas.addEventListener("touchstart", function (event) {
@@ -142,6 +146,10 @@ paint_erase.addEventListener("change", function () {
         canvas.addEventListener("mouseup", function () {
             canvas.removeEventListener("mousemove", erase);
         });
+
+        canvas.addEventListener("mouseleave", function () {
+            canvas.removeEventListener("mousemove", erase);
+        })
 
         // mobile
 
@@ -184,6 +192,10 @@ paint_random.addEventListener("change", function () {
         canvas.addEventListener("mouseup", function () {
             canvas.removeEventListener("mousemove", randomColor);
         });
+
+        canvas.addEventListener("mouseleave", function () {
+            canvas.removeEventListener("mousemove", randomColor);
+        })
 
         // mobile
 
