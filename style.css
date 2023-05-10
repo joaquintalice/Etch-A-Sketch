@@ -48,8 +48,9 @@ body {
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.089);
     border-bottom: 1px solid black;
-    margin-bottom: 2rem;
+    margin-bottom: 4.3rem;
     padding: 0rem 3rem;
+    font-size: 0.7rem;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -80,14 +81,15 @@ body {
     grid-template-rows: repeat(16, 1fr);
     gap: 0px;
     box-shadow: 8px 8px 19px rgba(0, 0, 0, 0.3);
+    cursor: crosshair;
 }
 
 .square {
-    background-color: rgb(148, 126, 126);
     -webkit-user-drag: none;
     user-select: none;
-    border: 0.001px solid black;
 }
+
+.square:hover {}
 
 
 .main-container {
@@ -284,7 +286,8 @@ input[type="radio"] {
 
     .header {
         padding: 0rem 2rem;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
+        margin-bottom: 5rem;
     }
 
     .credits {
@@ -298,8 +301,8 @@ input[type="radio"] {
     }
 
     #canvas {
-        width: 43em;
-        height: 43em;
+        width: 40em;
+        height: 40em;
     }
 
     .main-container {
@@ -352,12 +355,84 @@ input[type="radio"] {
     }
 }
 
+@media screen and (max-width: 1400px) {
+
+    .header {
+        padding: 0rem 2rem;
+        font-size: 0.6rem;
+    }
+
+    .credits {
+        gap: 1rem;
+    }
+
+    .credits img {
+        display: flex;
+        width: 1.6rem;
+
+    }
+
+    #canvas {
+        width: 40em;
+        height: 40em;
+    }
+
+    .main-container {
+        gap: 3rem;
+    }
+
+
+    #paint-options,
+    #canvas-options {
+        font-size: 14px;
+        gap: 25px;
+        width: 9rem;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    #paint-options label,
+    #canvas-options label {
+        gap: 10px;
+    }
+
+    #paint-options legend,
+    #canvas-options legend {
+        font-size: 17px;
+    }
+
+    #canvas-size {
+        width: 9rem;
+    }
+
+    /*input color style start*/
+    #paint-color {
+        width: 9rem;
+    }
+
+    #grid-color,
+    #canvas-color {
+        width: 1rem;
+    }
+
+    /*input color style end*/
+
+    /* clear button start */
+    #clear {
+        width: 9rem;
+    }
+
+    #clear {
+        font-size: 14px;
+    }
+}
 
 @media screen and (max-width: 1200px) {
 
     .header {
         padding: 0rem 2rem;
         font-size: 0.6rem;
+        margin-bottom: 4rem;
     }
 
     .credits {
