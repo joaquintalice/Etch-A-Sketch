@@ -84,6 +84,8 @@ body {
 
 .square {
     background-color: rgb(148, 126, 126);
+    -webkit-user-drag: none;
+    user-select: none;
     border: 0.001px solid black;
 }
 
