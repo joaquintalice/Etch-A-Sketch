@@ -1,16 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
 body {
-    background-color: rgb(186, 174, 176);
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    background-size: cover;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
     font-family: 'Kanit', sans-serif;
     margin: 0;
+}
+
+@-webkit-keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
+
+@keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(184, 161, 161);
+    background-color: rgba(0, 0, 0, 0.089);
     border-bottom: 1px solid black;
     margin-bottom: 2rem;
     padding: 0rem 3rem;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    text-shadow: 4px 4px 10px black;
+    display: flex;
+    align-items: baseline;
 }
 
 .credits {
@@ -28,8 +74,8 @@ body {
 
 #canvas {
     display: grid;
-    width: 40em;
-    height: 40em;
+    width: 45em;
+    height: 45em;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
     gap: 0px;
@@ -58,7 +104,7 @@ body {
     display: flex;
     font-size: 19px;
     border: 1px solid black;
-    background-color: rgb(184, 161, 161);
+    background-color: rgba(0, 0, 0, 0.089);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -75,6 +121,8 @@ body {
 #canvas-options label {
     display: flex;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 #paint-options legend,
@@ -99,7 +147,7 @@ body {
 
 #grid-color,
 #canvas-color {
-    width: 4rem;
+    width: 3rem;
 }
 
 /*input color style end*/
@@ -157,7 +205,7 @@ input[type="radio"] {
 
 /*animation rbg*/
 
-#span-rgb {
+.span-rgb {
     -webkit-animation: colorchange 20s infinite alternate;
 }
 
@@ -291,7 +339,7 @@ input[type="radio"] {
 
     #grid-color,
     #canvas-color {
-        width: 2rem;
+        width: 1rem;
     }
 
     /*input color style end*/
@@ -364,7 +412,7 @@ input[type="radio"] {
 
     #grid-color,
     #canvas-color {
-        width: 2rem;
+        width: 1rem;
     }
 
     /*input color style end*/
@@ -384,8 +432,8 @@ input[type="radio"] {
 @media screen and (max-width: 800px) {
 
     .header {
-        padding: 0rem 2rem;
-        font-size: 0.7rem;
+        padding: 0rem 1rem;
+        font-size: 0.5rem;
     }
 
     .credits {
@@ -406,7 +454,7 @@ input[type="radio"] {
     .main-container {
         display: flex;
         justify-content: center;
-        gap: 3rem;
+        gap: 2rem;
     }
 
 
@@ -441,7 +489,7 @@ input[type="radio"] {
 
     #grid-color,
     #canvas-color {
-        width: 1.5rem;
+        width: 1rem;
     }
 
     /*input color style end*/
@@ -468,6 +516,10 @@ input[type="radio"] {
         margin-right: 1rem;
     }
 
+    .main-container {
+        gap: 0.8rem;
+    }
+
     .credits img {
         display: flex;
         width: 1rem;
@@ -481,6 +533,11 @@ input[type="radio"] {
         padding-top: 10px;
         margin-bottom: 10px;
         margin-left: 0.3rem;
+    }
+
+    #grid-color,
+    #canvas-color {
+        width: 2rem;
     }
 }
 
@@ -513,8 +570,6 @@ input[type="radio"] {
     #canvas-options label {
         gap: 8px;
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     #paint-options legend,
@@ -535,7 +590,7 @@ input[type="radio"] {
 
     #grid-color,
     #canvas-color {
-        width: 1.3rem;
+        width: 1.4rem;
     }
 
     /*input color style end*/
