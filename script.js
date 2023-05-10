@@ -92,14 +92,17 @@ window.addEventListener("load", function () {
 
 /* ********************** */
 
+
 /*function to know wether the input range to paint with the custom color is checked*/
 paint_custom.addEventListener("change", function () {
     if (this.checked) {
+
 
         function paint(event) {
             const square = event.target;
             square.style.backgroundColor = paint_color.value;
         };
+
 
         canvas.addEventListener("mousedown", function () {
             canvas.addEventListener("mousemove", paint);
@@ -177,9 +180,9 @@ paint_random.addEventListener("change", function () {
             const r = Math.floor(Math.random() * 256);
             const g = Math.floor(Math.random() * 256);
             const b = Math.floor(Math.random() * 256);
-            const a = Math.random();
+            //const a = Math.random();
 
-            const color = `rgba(${r},${g},${b},${a})`;
+            const color = `rgba(${r},${g},${b},${0.94})`;
 
             square.style.backgroundColor = color;
         }
