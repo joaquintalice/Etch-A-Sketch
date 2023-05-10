@@ -8,16 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
-    <title>Etch-A-Sketch</title>
-    <link rel="icon" href="">
+    <title>Etch-a-sketch</title>
+    <link rel="icon" href="./assets/pageIcon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="header">
         <h1 class="title">Etch-a-sketch</h1>
-        <h1 class="credits">Made by: Joaquin Talice<a target="_blank"
-                href="https://github.com/joaquintalice/Etch-A-Sketch"><img src="assets/githubLogo.png"></a></h1>
+        <h1 class="credits">Joaquin Talice<a target="_blank" href="https://github.com/joaquintalice/Etch-A-Sketch"><img
+                    src="assets/githubLogo.png"></a></h1>
     </div>
 
     <div class="main-container">
@@ -35,7 +35,7 @@
                 </label>
                 <label for="paint-random" title="Random Paint Color">
                     <input type="radio" id="paint-random" name="paint-type" value="random">
-                    <span id="span-rgb">Random colors</span>
+                    <span class="span-rgb">Random colors</span>
                 </label>
                 <label for="paint-erase" title="Erase Paint Color">
                     <input type="radio" id="paint-erase" name="paint-type" value="erase">
@@ -48,11 +48,11 @@
                 <label for="grid-color" title="Select Color">
                     <input type="color" id="grid-color" value="#000000">
                     Grid Color
-                    <input type="checkbox" id="grid-show" title="Grid On/Off" checked="">
+                    <input type="checkbox" id="grid-show" title="Grid On/Off">
                 </label>
                 <label for="canvas-color" title="Select Color">
-                    <input type="color" id="canvas-color" value="#E3E3E3">
-                    Canvas Color
+                    <input type="color" id="canvas-color" value="#DFDFDF">
+                    Background Color
                 </label>
                 <button id="clear" title="Clear Canvas" type="button">Clear</button>
                 <label for="canvas-size" title="Change Canvas Size">
