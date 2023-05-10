@@ -112,7 +112,7 @@ paint_custom.addEventListener("change", function () {
         // mobile
 
         canvas.addEventListener("touchstart", function (event) {
-            event.preventDefault(); // Prevent scrolling
+            event.preventDefault(); // prevent scrolling
             canvas.addEventListener("touchmove", paint);
         });
 
@@ -169,11 +169,13 @@ paint_random.addEventListener("change", function () {
             const r = Math.floor(Math.random() * 256);
             const g = Math.floor(Math.random() * 256);
             const b = Math.floor(Math.random() * 256);
+            const a = Math.random();
 
-            const color = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`
+            const color = `rgba(${r},${g},${b},${a})`;
 
             square.style.backgroundColor = color;
         }
+
 
         canvas.addEventListener("mousedown", function () {
             canvas.addEventListener("mousemove", randomColor);
