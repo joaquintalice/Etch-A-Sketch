@@ -38,6 +38,7 @@ function createGrid(num) {
     for (let i = 0; i < num * num; i++) {
         const square = document.createElement("div");
         square.classList.add("square");
+        square.classList.add("animate");
         canvas.appendChild(square);
 
     }
@@ -101,6 +102,7 @@ paint_custom.addEventListener("change", function () {
         function paint(event) {
             const square = event.target;
             square.style.backgroundColor = paint_color.value;
+            square.classList.add("animate2");
         };
 
 
@@ -139,6 +141,7 @@ paint_erase.addEventListener("change", function () {
 
         function erase(event) {
             const square = event.target;
+            square.classList.add("animate2");
             square.style.backgroundColor = canvas_color.value;
         }
 
