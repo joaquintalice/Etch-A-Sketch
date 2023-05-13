@@ -89,8 +89,33 @@ body {
     user-select: none;
 }
 
-.square:hover {}
+.animate {
+    animation: miAnimacion 1.3s ease;
+}
 
+@keyframes miAnimacion {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate2 {
+    animation: miAnimacion2 0.6s ease;
+}
+
+@keyframes miAnimacion2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 .main-container {
     display: flex;
